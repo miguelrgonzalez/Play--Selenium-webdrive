@@ -54,7 +54,7 @@ The start all the different nodes you want:
 
 If you plan to use internet explorer browser on you test you need to be a little bit more specific when starting the node: 
 
-@java -jar selenium-server-standalone-2.20.0.jar -role node -hub http://linux-workstation.swets.nl:4444/grid/register -browser "browserName=internet explorer,version=8,platform=WINDOWS"@
+@java -jar selenium-server-standalone-2.20.0.jar -role node -hub http://<selenium grid server>:4444/grid/register -browser "browserName=internet explorer,version=8,platform=WINDOWS"@
 
 This is to workaround a bug on how selenium identifies the node's platform. "Issue 1699":http://code.google.com/p/selenium/issues/detail?id=1699&colspec=ID%20Stars%20Type%20Status%20Priority%20Milestone%20Owner%20Summary&start=200
 
