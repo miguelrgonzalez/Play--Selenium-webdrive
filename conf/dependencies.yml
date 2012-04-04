@@ -1,0 +1,5 @@
+self: play -> selenium 0.1
+
+require:
+    - play
+    - org.seleniumhq.selenium -> selenium-java 2.5.0

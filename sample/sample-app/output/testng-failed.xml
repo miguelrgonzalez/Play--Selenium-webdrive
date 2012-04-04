@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [test suite]">
+  <test name="Tests(failed)" preserve-order="false">
+    <classes>
+      <class name="play.modules.selenium.custom.TestSuite">
+        <methods>
+          <include name="startPlay"/>
+        </methods>
+      </class>
+      <class name="selenium.GoogleTest">
+        <methods>
+          <include name="shutdown"/>
+          <include name="checkWebpage"/>
+        </methods>
+      </class>
+    </classes>
+  </test>
+</suite>

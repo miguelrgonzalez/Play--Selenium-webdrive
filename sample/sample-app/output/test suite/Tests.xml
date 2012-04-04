@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite hostname="lxws-201" tests="2" failures="0" timestamp="4 Apr 2012 09:39:22 GMT" time="3.708" errors="0">
+  <testcase name="@AfterClass shutdown" time="0.0" classname="selenium.GoogleTest">
+    <failure type="org.openqa.selenium.WebDriverException" message="session 64bac6c4-9e98-414b-9c93-54522a879ff9 does not exist
+Command duration or timeout: 2 milliseconds
+Build info: version: &amp;apos;2.20.0&amp;apos;, revision: &amp;apos;16008&amp;apos;, time: &amp;apos;2012-02-27 19:03:04&amp;apos;
+System info: os.name: &amp;apos;Windows 7&amp;apos;, os.arch: &amp;apos;amd64&amp;apos;, os.version: &amp;apos;6.1&amp;apos;, java.version: &amp;apos;1.6.0_27&amp;apos;
+Driver info: driver.version: EventFiringWebDriver
+Build info: version: &amp;apos;2.5.0&amp;apos;, revision: &amp;apos;13548&amp;apos;, time: &amp;apos;2011-08-24 13:44:31&amp;apos;
+System info: os.name: &amp;apos;Linux&amp;apos;, os.arch: &amp;apos;amd64&amp;apos;, os.version: &amp;apos;2.6.34.7-0.7-desktop&amp;apos;, java.version: &amp;apos;1.6.0_21&amp;apos;
+Driver info: driver.version: RemoteWebDriver">
+      <![CDATA[org.openqa.selenium.WebDriverException: session 64bac6c4-9e98-414b-9c93-54522a879ff9 does not exist
+Command duration or timeout: 2 milliseconds
+Build info: version: '2.20.0', revision: '16008', time: '2012-02-27 19:03:04'
+System info: os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.6.0_27'
+Driver info: driver.version: EventFiringWebDriver
+Build info: version: '2.5.0', revision: '13548', time: '2011-08-24 13:44:31'
+System info: os.name: 'Linux', os.arch: 'amd64', os.version: '2.6.34.7-0.7-desktop', java.version: '1.6.0_21'
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:131)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:105)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:409)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:413)
+	at org.openqa.selenium.remote.RemoteWebDriver.quit(RemoteWebDriver.java:289)
+	at play.modules.selenium.custom.BaseTest.shutdown(BaseTest.java:25)
+Caused by: org.openqa.selenium.remote.ScreenshotException: Screen shot has been taken
+Build info: version: '2.5.0', revision: '13548', time: '2011-08-24 13:44:31'
+System info: os.name: 'Linux', os.arch: 'amd64', os.version: '2.6.34.7-0.7-desktop', java.version: '1.6.0_21'
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:99)
+	... 28 more
+Caused by: org.openqa.selenium.WebDriverException: session 64bac6c4-9e98-414b-9c93-54522a879ff9 does not exist
+Command duration or timeout: 2 milliseconds
+Build info: version: '2.20.0', revision: '16008', time: '2012-02-27 19:03:04'
+System info: os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.6.0_27'
+Driver info: driver.version: EventFiringWebDriver
+Build info: version: '2.5.0', revision: '13548', time: '2011-08-24 13:44:31'
+System info: os.name: 'Linux', os.arch: 'amd64', os.version: '2.6.34.7-0.7-desktop', java.version: '1.6.0_21'
+Driver info: driver.version: EventFiringWebDriver
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:170)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:123)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:438)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:442)
+	at org.openqa.selenium.remote.RemoteWebDriver.quit(RemoteWebDriver.java:318)
+	at org.openqa.selenium.support.events.EventFiringWebDriver$2.invoke(EventFiringWebDriver.java:98)
+	at $Proxy2.quit(Unknown Source)
+	at org.openqa.selenium.support.events.EventFiringWebDriver.quit(EventFiringWebDriver.java:191)
+	at org.openqa.selenium.remote.server.handler.DeleteSession.call(DeleteSession.java:44)
+	at org.openqa.selenium.remote.server.handler.DeleteSession.call(DeleteSession.java:1)
+	at java.util.concurrent.FutureTask$Sync.innerRun(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+... Removed 36 stack frames]]>
+    </failure>
+  </testcase>
+  <testcase name="checkWebpage" time="2.329" classname="selenium.GoogleTest"/>
+  <testcase name="checkWebpage" time="0.0" classname="selenium.GoogleTest">
+    <skipped/>
+  </testcase>
+</testsuite>

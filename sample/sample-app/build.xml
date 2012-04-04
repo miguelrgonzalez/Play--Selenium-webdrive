@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project name="selenium-sample" basedir=".">
+
+    <property environment="env"/>
+    <property name="play.path" value="${env.PLAY_PATH}"/>
+    <property name="test.build.path" value="tmp/classes"/>
+    <property name="test.output.path" value="output"/>
+
+    <path id="project.classpath">
+        <fileset dir="${play.path}/framework/lib">
+            <include name="*.jar"/>
+        </fileset>
+        <fileset dir="${play.path}/framework">
+            <include name="*.jar"/>
+        </fileset>
+        <fileset dir="../../lib">
+            <include name="*.jar"/>
+        </fileset>
+        <fileset dir="lib">
+            <include name="*.jar"/>
+        </fileset>
+
+        <pathelement path="${test.build.path}" />
+    </path>
+
+    <taskdef resource="testngtasks" >
+        <classpath refid="project.classpath"/>
+    </taskdef>
+
+    <target name="compile" >
+        <mkdir dir="${test.build.path}" />
+        <javac srcdir="test/selenium" destdir="${test.build.path}" target="1.5" debug="true">
+            <classpath refid="project.classpath" />
+        </javac>
+    </target>
+
+    <target name="runTestNG" depends="compile">
+        <mkdir dir="${test.output.path}"/>
+        <testng outputdir="${test.output.path}" classpathref="project.classpath"> 
+            <!--classfileset dir="${test.build.path}" includes="**/*.class" /-->
+            <xmlfileset dir="." includes="testng.xml"/>
+        </testng>
+    </target>
+
+</project>

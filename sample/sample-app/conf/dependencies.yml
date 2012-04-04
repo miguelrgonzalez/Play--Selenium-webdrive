@@ -1,0 +1,12 @@
+# Application dependencies
+
+require:
+    - play
+    - nl.swets.everwise -> selenium 0.1
+repositories:
+    - MyMmodules:
+        type:       local
+        artifact:   ${application.path}/../../../[module]
+        contains:
+            - nl.swets.everwise -> *
+

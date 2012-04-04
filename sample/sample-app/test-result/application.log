@@ -1,0 +1,5 @@
+04 Apr 2012 11:39:04,916 INFO  ~ Starting /home/SWETS_MAIL/lsdcdmr/Workspace/modules/selenium/sample/sample-app/.
+04 Apr 2012 11:39:04,920 INFO  ~ Module selenium is available (/home/SWETS_MAIL/lsdcdmr/Workspace/modules/selenium/sample/sample-app/../../../selenium)
+04 Apr 2012 11:39:05,360 WARN  ~ You're running Play! in DEV mode
+04 Apr 2012 11:39:06,112 INFO  ~ Connected to jdbc:h2:mem:play;MODE=MYSQL;LOCK_MODE=0
+04 Apr 2012 11:39:06,124 INFO  ~ Application 'sample-app' is now started !

@@ -1,0 +1,7 @@
+<suite name="test suite" verbose="1">
+  <test name="Tests" >
+    <classes>
+      <class name="play.modules.selenium.custom.TestSuite" />
+    </classes>
+  </test>
+</suite>
