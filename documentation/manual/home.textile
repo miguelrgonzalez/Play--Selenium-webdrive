@@ -58,6 +58,9 @@ If you plan to use internet explorer browser on you test you need to be a little
 
 This is to workaround a bug on how selenium identifies the node's platform. "Issue 1699":http://code.google.com/p/selenium/issues/detail?id=1699&colspec=ID%20Stars%20Type%20Status%20Priority%20Milestone%20Owner%20Summary&start=200
 
+
+More info "here":http://code.google.com/p/selenium/wiki/Grid2
+
 And finally you can run your tests:
 
 @ant runTestNG@
