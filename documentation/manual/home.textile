@@ -1,31 +1,63 @@
-h1. {module name}
+h1. Selenium
 
-p(note). Write your module documentation in this file, possibly linking to other Textile files, and delete these notes when you are finished.
-
-p(note). Start with a clear statement of what the module is and what it is for. Link to any third-party libraries that the module is based on.
-
-p(note). Briefly describe why you might want to use this module in a Play application.
+Provides selenium webdriver support for play applications.
 
 h2. Sample application
 
-p(note). Your module should contain a sample app in the @sample@ directory that demonstrates the module. Describe how to run the demo here.
-
-h2. Getting started
-
-p(note). Describe any installation that is required, beyond adding and resolving the module dependency.
+Under sample/sample-app you can find a simple selenium test example using the module.
 
 h2. Configuration
 
-p(note). List any configuration options that the module uses, with an @h3.@ heading for each one.
+So far only 2 configuration items must be added:
 
-h2. Usage
+h3. test.selenium.browsers 
 
-p(note). Explain how to use the module, and describe any routes, controllers, models or views that the module provides.
+List of browsers you want the tests to be executed at
 
-h2. Tags
+bc.  test.selenium.browsers=firefox,iexplorer,chrome,safari : 
 
-p(note). List any tags the module provides, with an @h3.@ heading for each one. Include the tags’ arguments.
+h3. test.selenium.hub.url
 
-h2. Commands
+Url of the selenium grid server
 
-p(note). List any commands the module provides, with an @h3.@ heading for each one. Include the commands’ options.
+bc.  test.selenium.hub.url=http://localhost:4444/wd/hub
+
+h2. Creating tests
+
+Create your test as you would normally using testng and extend the class @play.modules.selenium.custom.BaseTest@
+
+Example:
+
+bc. public class GoogleTest extends BaseTest {
+    public GoogleTest(DesiredCapabilities cap, String hub) throws Exception {
+        super(cap, hub);
+    }
+    @Test
+    public void checkWebpage () {
+        driver.get("http://www.google.com");
+        driver.findElement(By.name("q")).sendKeys("Swets");
+        driver.findElement(By.name("q")).submit();
+        driver.close();
+    }
+}
+
+
+h2. Running the tests
+
+First start the server. You should run something like this:
+
+@java -jar selenium-server-standalone-2.20.0.jar -role hub@
+
+The start all the different nodes you want:
+
+@java -jar selenium-server-standalone-2.20.0.jar -role node  -hub http://<selenium grid server>:4444/grid/register@
+
+If you plan to use internet explorer browser on you test you need to be a little bit more specific when starting the node: 
+
+@java -jar selenium-server-standalone-2.20.0.jar -role node -hub http://linux-workstation.swets.nl:4444/grid/register -browser "browserName=internet explorer,version=8,platform=WINDOWS"@
+
+This is to workaround a bug on how selenium identifies the node's platform. "Issue 1699":http://code.google.com/p/selenium/issues/detail?id=1699&colspec=ID%20Stars%20Type%20Status%20Priority%20Milestone%20Owner%20Summary&start=200
+
+And finally you can run your tests:
+
+@ant runTestNG@
