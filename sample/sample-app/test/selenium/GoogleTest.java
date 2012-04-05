@@ -3,14 +3,11 @@ package selenium;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.By;
 import play.modules.selenium.custom.BaseTest;
+import play.modules.selenium.custom.Testable;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.Test;
 
-public class GoogleTest extends BaseTest {
-
-    public GoogleTest(DesiredCapabilities cap, String hub) throws Exception {
-        super(cap, hub);
-    }
+public class GoogleTest extends BaseTest implements Testable{
 
     @Test
     public void checkWebpage () {

@@ -13,7 +13,7 @@ public class BaseTest {
     protected WebDriver driver;
     private DesiredCapabilities cap;
 
-    public BaseTest(DesiredCapabilities cap, String hub) throws MalformedURLException {
+    public void init(DesiredCapabilities cap, String hub) throws MalformedURLException {
         this.driver = new RemoteWebDriver(new URL(hub), cap);
         this.cap = cap;
         this.driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);

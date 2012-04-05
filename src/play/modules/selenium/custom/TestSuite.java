@@ -79,8 +79,9 @@ public class TestSuite {
                 for(String browser : browsers) {
                     try {
                         System.out.println("Loading browser driver [" + drivers.get(browser).getBrowserName() + "]");
-                        results.add(clazz.getDeclaredConstructor(DesiredCapabilities.class, String.class)
-                                         .newInstance(drivers.get(browser), hub));   
+                        Testable test = (Testable) clazz.newInstance();
+                        test.init(drivers.get(browser), hub);
+                        results.add(test);
                     } catch(Exception e) {e.printStackTrace();}
                 }
             return results.toArray(new Object[results.size()]); 
