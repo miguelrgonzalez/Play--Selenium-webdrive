@@ -1,5 +1,6 @@
-05 Apr 2012 09:30:39,665 INFO  ~ Starting /home/SWETS_MAIL/lsdcdmr/Workspace/modules/selenium/sample/sample-app/.
-05 Apr 2012 09:30:39,672 INFO  ~ Module selenium is available (/home/SWETS_MAIL/lsdcdmr/Workspace/modules/selenium/sample/sample-app/../../../selenium)
-05 Apr 2012 09:30:40,389 WARN  ~ You're running Play! in DEV mode
-05 Apr 2012 09:30:41,274 INFO  ~ Connected to jdbc:h2:mem:play;MODE=MYSQL;LOCK_MODE=0
-05 Apr 2012 09:30:41,293 INFO  ~ Application 'sample-app' is now started !
+05 Apr 2012 15:55:00,073 INFO  ~ Starting /home/SWETS_MAIL/lsdcdmr/Workspace/modules/selenium/sample/sample-app
+05 Apr 2012 15:55:00,078 INFO  ~ Module selenium is available (/home/SWETS_MAIL/lsdcdmr/Workspace/modules/selenium/sample/sample-app/../../../selenium)
+05 Apr 2012 15:55:00,750 WARN  ~ You're running Play! in DEV mode
+05 Apr 2012 15:55:00,881 INFO  ~ Listening for HTTP on port 9000 (Waiting a first request to start) ...
+05 Apr 2012 15:55:02,827 INFO  ~ Connected to jdbc:h2:mem:play;MODE=MYSQL;LOCK_MODE=0
+05 Apr 2012 15:55:02,867 INFO  ~ Application 'sample-app' is now started !

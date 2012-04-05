@@ -1,13 +1,17 @@
 package selenium;
 
-import org.openqa.selenium.remote.DesiredCapabilities;
+import java.net.MalformedURLException;
+import org.junit.runners.Parameterized;
+import org.junit.Test;
 import org.openqa.selenium.By;
+import org.openqa.selenium.remote.DesiredCapabilities;
 import play.modules.selenium.custom.BaseTest;
-import play.modules.selenium.custom.Testable;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.Test;
 
-public class GoogleTest extends BaseTest implements Testable{
+public class GoogleTest extends BaseTest {
+
+    public GoogleTest(DesiredCapabilities cap, String hub) throws MalformedURLException {
+        super(cap,hub);
+    }
 
     @Test
     public void checkWebpage () {

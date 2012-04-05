@@ -43,4 +43,12 @@
         </testng>
     </target>
 
+    <target name="unittest" depends="compile">
+    <junit>
+        <classpath refid="project.classpath" />
+        <formatter type="plain" usefile="false" /> <!-- to screen -->
+        <test name = "selenium.GoogleTest" todir="."/>
+    </junit>
+</target>
+
 </project>
